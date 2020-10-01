@@ -1,0 +1,41 @@
+<form>
+  <div class="text-center">
+    <img class="mb-4 rounded-circle" src="assets/images/pngwing.com.png" alt="" width="100" height="100"/><br/><br/>
+    <p class="text-center font-weight-bold" style="font-size: x-large;">Qualidade no Armazenamento de Grãos</p>
+  </div>
+  
+  <div class="form-group"> 
+    <input 
+      type="email"
+      class="form-control"
+      #email="ngModel"
+      [(ngModel)]="usuario.login"
+      id="login"
+      name="login"
+      required
+      placeholder="Digite seu nome de usuário">
+  </div>
+  <div class="form-group">
+    <input
+      type="password"
+      class="form-control"
+      #senha="ngModel"
+      [(ngModel)]="usuario.senha"
+      id="senha"
+      name="senha"
+      required
+      placeholder="Digite sua senha">
+  </div>
+  <div class="form-group">
+    <button 
+      type="button"
+      [disabled]="email.invalid || senha.invalid"
+      class="btn btn-primary btn-lg btn-block" (click)="login()">
+        Acessar
+    </button>
+  </div>
+  <div class="text-center">
+			<button type="button" class="btn btn-link" style="color: #ffffff">Esqueci minha senha</button>
+  </div><br/><br/>
+  <p class="text-md-center">Desenvolvido por: Desenvolvimento de Sistemas - Grupo SLC</p>
+</form>
